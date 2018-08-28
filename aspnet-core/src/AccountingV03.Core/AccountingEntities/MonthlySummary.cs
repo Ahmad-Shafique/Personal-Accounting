@@ -10,8 +10,8 @@ using System.Threading.Tasks;
 
 namespace AccountingV03.AccountingEntities
 {
-    [Table("WeeklySummaries")]
-    public class WeeklySummary : FullAuditedEntity, IMustHaveTenant
+    [Table("MonthlySummaries")]
+    public class MonthlySummary : FullAuditedEntity, IMustHaveTenant
     {
         public int TenantId { get; set; }
         [Required]

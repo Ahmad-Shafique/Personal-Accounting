@@ -4,14 +4,16 @@ using AccountingV03.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace AccountingV03.Migrations
 {
     [DbContext(typeof(AccountingV03DbContext))]
-    partial class AccountingV03DbContextModelSnapshot : ModelSnapshot
+    [Migration("20180828214626_Added daily, weekly and monthly summaries")]
+    partial class Addeddailyweeklyandmonthlysummaries
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

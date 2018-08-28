@@ -10,19 +10,16 @@ using System.Threading.Tasks;
 
 namespace AccountingV03.AccountingEntities
 {
-    [Table("WeeklySummaries")]
-    public class WeeklySummary : FullAuditedEntity, IMustHaveTenant
+    [Table("DailySummaries")]
+    public class DailySummary : FullAuditedEntity, IMustHaveTenant
     {
         public int TenantId { get; set; }
         [Required]
-        public DateTime StartDate { get; set; }
-        [Required]
-        public DateTime EndDate { get; set; }
+        public DateTime Date { get; set; }
         public double Income { get; set; }
         public double Expense { get; set; }
         public double Debt { get; set; }
         public double Loan { get; set; }
         public double Balance { get; set; }
-
     }
 }

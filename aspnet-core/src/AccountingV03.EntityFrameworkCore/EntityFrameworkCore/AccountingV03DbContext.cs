@@ -15,6 +15,9 @@ namespace AccountingV03.EntityFrameworkCore
         public DbSet<Debt> Debts { get; set; }
         public DbSet<Loan> Loans { get; set; }
         public DbSet<Summary> Summaries { get; set; }
+        public DbSet<DailySummary> DailySummaries { get; set; }
+        public DbSet<WeeklySummary> WeeklySummaries { get; set; }
+        public DbSet<MonthlySummary> MonthlySummaries { get; set; }
 
         public AccountingV03DbContext(DbContextOptions<AccountingV03DbContext> options)
             : base(options)

@@ -67,10 +67,10 @@ namespace AccountingV03.AccountingServices
             double inc = 0, exp = 0, ln = 0, dt = 0;
             SummaryDTO summaryDTO;
             DateTime current = DateTime.Now;
-            tincomes = incomes.Where(e => (e.LastModificationTime.Value - current).TotalDays <= numberOfDays);
-            texpenses = expenses.Where(e => (e.LastModificationTime.Value - current).TotalDays <= numberOfDays);
-            tloans = loans.Where(e => (e.LastModificationTime.Value - current).TotalDays <= numberOfDays);
-            tdebts = debts.Where(e => (e.LastModificationTime.Value - current).TotalDays <= numberOfDays);
+            tincomes = incomes.Where(e => (e.LastModificationTime.Value - current).TotalDays <= interval);
+            texpenses = expenses.Where(e => (e.LastModificationTime.Value - current).TotalDays <= interval);
+            tloans = loans.Where(e => (e.LastModificationTime.Value - current).TotalDays <= interval);
+            tdebts = debts.Where(e => (e.LastModificationTime.Value - current).TotalDays <= interval);
             inc = tincomes.Sum(e => e.Amount);
             exp = texpenses.Sum(e => e.Amount);
             ln = tloans.Sum(e => e.Amount);
