@@ -1,4 +1,5 @@
-﻿using Abp.Application.Services.Dto;
+﻿using Abp.Application.Services;
+using Abp.Application.Services.Dto;
 using AccountingV03.AccountingEntities;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace AccountingV03.AccountingServices.Interfaces
 {
-    public interface ILoanService
+    public interface ILoanService : IApplicationService
     {
         Task<bool> Insert(Loan loan);
         Task<ListResultDto<Loan>> GetUnresolvedLoans();
